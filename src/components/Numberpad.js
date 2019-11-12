@@ -64,7 +64,7 @@ export default function NumberPad(props) {
         />
         <CalcButton 
             value='='
-    
+            function={props.evaluateExpression}
         />
     </View>
   );

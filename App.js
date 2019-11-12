@@ -19,17 +19,19 @@ export default class App extends React.Component {
   }
 
   backspaceExpression = () => {
-    console.log('short press');
-    
     let currentExpression = this.state.expression;
     let newExpression = currentExpression.slice(0, -1);
     this.setState({expression: newExpression});
   }
 
   clearExpression = () => {
-    console.log('long press');
-    
     this.setState({expression: ''});
+  }
+
+  evaluateExpression = () => {
+    let expression = this.state.expression;
+    let result = eval(expression);
+    this.setState({expression: result.toString()})
   }
 
   render() {
@@ -40,6 +42,7 @@ export default class App extends React.Component {
           updateExpression={this.updateExpression}
           backspaceExpression={this.backspaceExpression}
           clearExpression={this.clearExpression}
+          evaluateExpression={this.evaluateExpression}
         />
       </View>
     );
