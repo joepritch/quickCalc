@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 
 export default function CalcButton(props) {
   return (
-    <View style={styles.container}>
+    <TouchableHighlight style={styles.container}>
         <Text>{props.value}</Text>
-    </View>
+    </TouchableHighlight>
   );
 }
 

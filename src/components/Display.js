@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View,} from 'react-native';
 
-export default function Display() {
+export default function Display(props) {
   return (
     <View style={styles.container}>
-
+        <Text>{props.expression}</Text>
     </View>
   );
 }
