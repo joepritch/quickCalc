@@ -7,13 +7,15 @@ export default function NumberPad(props) {
     <View style={styles.container}>
         <CalcButton 
             value='1'
-            onPress={props.updateExpression}
+            function={props.updateExpression}
         />
         <CalcButton 
             value='2'
+            function={props.backspaceExpression}
         />
         <CalcButton 
             value='3'
+            function={props.clearExpression}
         />
         <CalcButton 
             value='4'

@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 
 export default function CalcButton(props) {
   return (
-    <TouchableHighlight style={styles.container}>
+    <TouchableHighlight style={styles.container} onPress={() => props.function(props.value)}>
         <Text>{props.value}</Text>
     </TouchableHighlight>
   );
