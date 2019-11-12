@@ -6,6 +6,10 @@ export default function NumberPad(props) {
   return (
     <View style={styles.container}>
         <CalcButton 
+            value='0'
+            function={props.updateExpression}
+        />
+        <CalcButton 
             value='1'
             function={props.updateExpression}
         />
