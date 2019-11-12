@@ -11,7 +11,7 @@ export default function Display() {
 
 const styles = StyleSheet.create({
   container: {
-    height: '20%',
+    height: '25%',
     width: '100%',
     backgroundColor: 'blue',
     alignItems: 'center',

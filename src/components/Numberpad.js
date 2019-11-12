@@ -12,7 +12,7 @@ export default function NumberPad() {
 
 const styles = StyleSheet.create({
   container: {
-    height: '80%',
+    height: '75%',
     width: '100%',
     backgroundColor: 'grey',
     alignItems: 'center',

@@ -3,13 +3,23 @@ import { StyleSheet, View,} from 'react-native';
 import Display from './src/components/Display.js';
 import Numberpad from './src/components/Numberpad.js';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Display/>
-      <Numberpad/>
-    </View>
-  );
+export default class App extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      input: ''
+    }
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Display/>
+        <Numberpad/>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
