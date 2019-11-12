@@ -19,12 +19,16 @@ export default class App extends React.Component {
   }
 
   backspaceExpression = () => {
+    console.log('short press');
+    
     let currentExpression = this.state.expression;
     let newExpression = currentExpression.slice(0, -1);
     this.setState({expression: newExpression});
   }
 
   clearExpression = () => {
+    console.log('long press');
+    
     this.setState({expression: ''});
   }
 

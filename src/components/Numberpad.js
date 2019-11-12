@@ -11,47 +11,60 @@ export default function NumberPad(props) {
         />
         <CalcButton 
             value='2'
-            function={props.backspaceExpression}
+            function={props.updateExpression}
         />
         <CalcButton 
             value='3'
-            function={props.clearExpression}
+            function={props.updateExpression}
         />
         <CalcButton 
             value='4'
+            function={props.updateExpression}
         />
         <CalcButton 
             value='5'
+            function={props.updateExpression}
         />
         <CalcButton 
             value='6'
+            function={props.updateExpression}
         />
         <CalcButton 
             value='7'
+            function={props.updateExpression}
         />
         <CalcButton 
             value='8'
+            function={props.updateExpression}
         />
         <CalcButton 
             value='9'
+            function={props.updateExpression}
         />
-        <CalcButton value='DEL'
-        
+        <CalcButton 
+            value='DEL'
+            function={props.backspaceExpression}
+            longPressFunction={props.clearExpression}
         />
         <CalcButton 
             value='+'
+            function={props.updateExpression}
         />
         <CalcButton 
             value='-'
+            function={props.updateExpression}
         />
         <CalcButton 
             value='*'
+            function={props.updateExpression}
         />
         <CalcButton 
             value='/'
+            function={props.updateExpression}
         />
         <CalcButton 
             value='='
+    
         />
     </View>
   );
