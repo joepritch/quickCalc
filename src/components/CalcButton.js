@@ -9,7 +9,7 @@ export default function CalcButton(props) {
         onLongPress={props.longPressFunction}
         delayLongPress={100}
     >
-        <Text>{props.value}</Text>
+        <Text style={{color: '#ffffff', fontSize: 40}}>{props.value}</Text>
     </TouchableHighlight>
   );
 }
@@ -17,10 +17,11 @@ export default function CalcButton(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'green',
+    backgroundColor: '#000000',
     alignItems: 'center',
     justifyContent: 'center',
     flexBasis: '20%',
-    margin: '5%',
+    margin: '2.5%',
+    borderRadius: 7,
   },
 });

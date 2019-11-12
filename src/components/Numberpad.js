@@ -6,34 +6,6 @@ export default function NumberPad(props) {
   return (
     <View style={styles.container}>
         <CalcButton 
-            value='0'
-            function={props.updateExpression}
-        />
-        <CalcButton 
-            value='1'
-            function={props.updateExpression}
-        />
-        <CalcButton 
-            value='2'
-            function={props.updateExpression}
-        />
-        <CalcButton 
-            value='3'
-            function={props.updateExpression}
-        />
-        <CalcButton 
-            value='4'
-            function={props.updateExpression}
-        />
-        <CalcButton 
-            value='5'
-            function={props.updateExpression}
-        />
-        <CalcButton 
-            value='6'
-            function={props.updateExpression}
-        />
-        <CalcButton 
             value='7'
             function={props.updateExpression}
         />
@@ -51,11 +23,31 @@ export default function NumberPad(props) {
             longPressFunction={props.clearExpression}
         />
         <CalcButton 
-            value='+'
+            value='4'
             function={props.updateExpression}
         />
         <CalcButton 
-            value='-'
+            value='5'
+            function={props.updateExpression}
+        />
+        <CalcButton 
+            value='6'
+            function={props.updateExpression}
+        />
+        <CalcButton 
+            value='/'
+            function={props.updateExpression}
+        />
+        <CalcButton 
+            value='1'
+            function={props.updateExpression}
+        />
+        <CalcButton 
+            value='2'
+            function={props.updateExpression}
+        />
+        <CalcButton 
+            value='3'
             function={props.updateExpression}
         />
         <CalcButton 
@@ -63,7 +55,15 @@ export default function NumberPad(props) {
             function={props.updateExpression}
         />
         <CalcButton 
-            value='/'
+            value='0'
+            function={props.updateExpression}
+        />
+        <CalcButton 
+            value='+'
+            function={props.updateExpression}
+        />
+        <CalcButton 
+            value='-'
             function={props.updateExpression}
         />
         <CalcButton 
@@ -75,12 +75,13 @@ export default function NumberPad(props) {
 }
 
 const styles = StyleSheet.create({
-  container: {
+    container: {
     height: '75%',
     width: '100%',
-    backgroundColor: 'grey',
+    backgroundColor: '#474747',
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignContent: 'stretch',
+    padding: '2.5%',
   },
 });
