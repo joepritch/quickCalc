@@ -12,6 +12,8 @@ export default class App extends React.Component {
     }
   }
 
+  operators = ['+', '-', '*', '/'];
+
   updateExpression = (input) => {
     let currentExpression = this.state.expression;
     let newExpression = currentExpression.concat(input);
@@ -30,8 +32,11 @@ export default class App extends React.Component {
 
   evaluateExpression = () => {
     let expression = this.state.expression;
-    let result = eval(expression);
-    this.setState({expression: result.toString()})
+    let lastInput = expression.slice(-1);
+    if (!this.operators.includes(lastInput)) {
+      let result = eval(expression);
+      this.setState({expression: result.toString()})
+    }
   }
 
   render() {
