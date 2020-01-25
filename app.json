@@ -23,6 +23,9 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "package": "com.joethedev.quickcalc"
+    },
     "ios": {
       "supportsTablet": true
     }
