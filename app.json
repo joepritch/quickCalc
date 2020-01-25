@@ -14,7 +14,7 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -27,6 +27,7 @@
       "package": "com.joethedev.quickcalc"
     },
     "ios": {
+      "bundleIdentifier": "com.joethedev.quickcalc",
       "supportsTablet": true
     }
   }
