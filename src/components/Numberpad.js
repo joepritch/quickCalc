@@ -6,69 +6,69 @@ export default function NumberPad(props) {
   return (
     <View style={styles.container}>
         <CalcButton 
-            value='7'
-            function={props.updateExpression}
+            value = {7}
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='8'
-            function={props.updateExpression}
+            value = {8}
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='9'
-            function={props.updateExpression}
+            value = {9}
+            function = {props.updateExpression}
         />
         <CalcButton 
             value='DEL'
-            function={props.backspaceExpression}
-            longPressFunction={props.clearExpression}
+            function = {props.backspaceExpression}
+            longPressFunction = {props.clearExpression}
         />
         <CalcButton 
-            value='4'
-            function={props.updateExpression}
+            value = {4}
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='5'
-            function={props.updateExpression}
+            value = {5}
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='6'
-            function={props.updateExpression}
+            value = {6}
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='/'
-            function={props.updateExpression}
+            value = "/"
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='1'
-            function={props.updateExpression}
+            value = {1}
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='2'
-            function={props.updateExpression}
+            value = {2}
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='3'
-            function={props.updateExpression}
+            value = {3}
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='*'
-            function={props.updateExpression}
+            value = "*"
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='0'
-            function={props.updateExpression}
+            value = {0}
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='+'
-            function={props.updateExpression}
+            value = "+"
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='-'
-            function={props.updateExpression}
+            value = "-"
+            function = {props.updateExpression}
         />
         <CalcButton 
-            value='='
-            function={props.evaluateExpression}
+            value = "="
+            function = {props.evaluateExpression}
         />
     </View>
   );

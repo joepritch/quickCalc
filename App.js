@@ -8,7 +8,7 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      expression: ''
+      expression: '',
     }
   }
 
@@ -16,8 +16,19 @@ export default class App extends React.Component {
 
   updateExpression = (input) => {
     let currentExpression = this.state.expression;
+    let lastInput = currentExpression.slice(-1);
     let newExpression = currentExpression.concat(input);
-    this.setState({expression: newExpression});
+    if (this.operators.includes(lastInput) && this.operators.includes(input)) {      
+      if (lastInput !== '-' && input === '-') {
+        this.setState({expression: newExpression});
+      } else {
+        let swappedExpression = currentExpression.slice(0,-1);
+        let finalExpression = swappedExpression.concat(input);
+        this.setState({expression: finalExpression});
+      }
+    } else {
+      this.setState({expression: newExpression});
+    }
   }
 
   backspaceExpression = () => {
@@ -31,12 +42,33 @@ export default class App extends React.Component {
   }
 
   evaluateExpression = () => {
-    let expression = this.state.expression;
-    let lastInput = expression.slice(-1);
-    if (!this.operators.includes(lastInput)) {
-      let result = eval(expression);
-      this.setState({expression: result.toString()})
-    }
+    let currentExpression = this.state.expression;
+    let lastInput = currentExpression.slice(-1);
+    let testResult = new Promise((resolve, reject) => {
+      let chicken = eval(currentExpression)
+      if (typeof chicken === "number") {
+        resolve('chicken is a number')
+      } else {
+        reject('bad expression')
+      }
+    })
+
+    testResult.then((message) => {
+      console.log(message);
+    }).catch((message) => {
+      console.log('failed ' + message);
+      
+    })
+    // if (!this.operators.includes(lastInput)) {
+    //   let result = eval(currentExpression);
+    //   let resultType = typeof result;
+    //   console.log(result, ' ', resultType);
+    //   if (resultType = 'number') {
+    //     this.setState({expression: result.toString()})
+    //   } else {
+    //     this.setState({expression: 'Error'})
+    //   }
+    // }
   }
 
   render() {
